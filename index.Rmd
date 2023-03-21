@@ -1,5 +1,5 @@
 --- 
-title: "YOUR TITLE HERE"
+title: "Prediction of Heart Attack"
 author: "Yiming Zhu"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
