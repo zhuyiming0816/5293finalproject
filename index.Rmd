@@ -43,6 +43,8 @@ target:
 
 The goal of this project is to predict the probability of whether a person is likely to have a heart attack based on their gender, age, cholesterol level using a logistic model, a Naive Bayes model, and a decision tree model. In addition, I will compare the result of all three models with the ‘target’ variable, which is the prediction of heart attack provided by the data author.  
 
+This repo was initially generated from a bookdown template available here: https://github.com/jtr13/IMLVtemplate.
+
 
 
 
