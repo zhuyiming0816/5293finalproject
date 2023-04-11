@@ -9,8 +9,7 @@ This repo was initially generated from a bookdown template available here: https
 
 Book Link: https://zhuyiming0816.github.io/5293finalproject/
 
-Data source: https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset
-(There is no UCI repository for this data)
+Data source: https://archive.ics.uci.edu/ml/datasets/Heart+Disease
 
 
 
