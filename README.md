@@ -9,7 +9,7 @@ This repo was initially generated from a bookdown template available here: https
 
 Book Link: https://zhuyiming0816.github.io/5293finalproject/
 
-Data source: https://archive.ics.uci.edu/ml/datasets/Heart+Disease
+Data source: https://archive.ics.uci.edu/ml/datasets/Heart+Disease (UCI)
 
 
 

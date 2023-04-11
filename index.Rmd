@@ -48,4 +48,4 @@ This repo was initially generated from a bookdown template available here: https
 
 
 
-Data source: https://archive.ics.uci.edu/ml/datasets/Heart+Disease
+Data source: https://archive.ics.uci.edu/ml/datasets/Heart+Disease (UCI)
