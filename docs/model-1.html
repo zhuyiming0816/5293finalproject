@@ -23,7 +23,7 @@
 <meta name="author" content="Yiming Zhu" />
 
 
-<meta name="date" content="2023-04-11" />
+<meta name="date" content="2023-04-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -98,6 +98,64 @@
             <section class="normal" id="section-">
 <div id="model-1" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> [Model 1]<a href="model-1.html#model-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<pre><code>## &#39;data.frame&#39;:    918 obs. of  12 variables:
+##  $ Age           : int  40 49 37 48 54 39 45 54 37 48 ...
+##  $ Sex           : Factor w/ 2 levels &quot;F&quot;,&quot;M&quot;: 2 1 2 1 2 2 1 2 2 1 ...
+##  $ ChestPainType : Factor w/ 4 levels &quot;ASY&quot;,&quot;ATA&quot;,&quot;NAP&quot;,..: 2 3 2 1 3 3 2 2 1 2 ...
+##  $ RestingBP     : int  140 160 130 138 150 120 130 110 140 120 ...
+##  $ Cholesterol   : int  289 180 283 214 195 339 237 208 207 284 ...
+##  $ FastingBS     : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ RestingECG    : Factor w/ 3 levels &quot;LVH&quot;,&quot;Normal&quot;,..: 2 2 3 2 2 2 2 2 2 2 ...
+##  $ MaxHR         : int  172 156 98 108 122 170 170 142 130 120 ...
+##  $ ExerciseAngina: Factor w/ 2 levels &quot;N&quot;,&quot;Y&quot;: 1 1 1 2 1 1 1 1 2 1 ...
+##  $ Oldpeak       : num  0 1 0 1.5 0 0 0 0 1.5 0 ...
+##  $ ST_Slope      : Factor w/ 3 levels &quot;Down&quot;,&quot;Flat&quot;,..: 3 2 3 2 3 3 3 3 2 3 ...
+##  $ HeartDisease  : int  0 1 0 1 0 0 0 0 1 0 ...</code></pre>
+<p>Firstly, we split data with 70/30.</p>
+<p>Then we predict the logistic regression on all the variables.</p>
+<pre><code>## 
+## Call:
+## glm(formula = HeartDisease ~ ., family = binomial(link = &quot;logit&quot;), 
+##     data = train_data)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -2.6113  -0.3876   0.1815   0.4623   2.6343  
+## 
+## Coefficients:
+##                    Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)      -2.0172393  1.5730873  -1.282 0.199722    
+## Age               0.0237821  0.0149542   1.590 0.111760    
+## SexM              1.4089327  0.3083171   4.570 4.88e-06 ***
+## ChestPainTypeATA -1.7436606  0.3570518  -4.883 1.04e-06 ***
+## ChestPainTypeNAP -1.6332337  0.2891257  -5.649 1.62e-08 ***
+## ChestPainTypeTA  -1.5017144  0.4709041  -3.189 0.001428 ** 
+## RestingBP         0.0025601  0.0066686   0.384 0.701048    
+## Cholesterol      -0.0041877  0.0011893  -3.521 0.000430 ***
+## FastingBS         1.0007113  0.3010009   3.325 0.000885 ***
+## RestingECGNormal  0.1095094  0.2985768   0.367 0.713790    
+## RestingECGST     -0.0680890  0.3938741  -0.173 0.862754    
+## MaxHR             0.0006257  0.0055325   0.113 0.909956    
+## ExerciseAnginaY   0.8881765  0.2710944   3.276 0.001052 ** 
+## Oldpeak           0.4137062  0.1309423   3.159 0.001581 ** 
+## ST_SlopeFlat      1.3637780  0.4846539   2.814 0.004894 ** 
+## ST_SlopeUp       -1.1646171  0.5053302  -2.305 0.021185 *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1010.42  on 734  degrees of freedom
+## Residual deviance:  488.17  on 719  degrees of freedom
+## AIC: 520.17
+## 
+## Number of Fisher Scoring iterations: 5</code></pre>
+<pre><code>##    glm.prediction
+##      0  1
+##   0 68 14
+##   1  7 94</code></pre>
+<pre><code>## [1] 0.8852459</code></pre>
+<p>The accuracy rate is 88.52459%.</p>
 
 </div>
             </section>

@@ -1,2 +1,6 @@
 # Reflections
 
+Logistic Regression Model : 88.52459%
+Random Forest Model : 88.52459%
+Support Vector Machine (radial) Model : 83.06011%
+

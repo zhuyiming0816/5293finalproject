@@ -1,1 +1,16 @@
 # [Model 2]
+
+Then we perform the random forest model. 
+```{r}
+library(randomForest)
+rf.model <- randomForest(HeartDisease ~ ., data = train_data)
+importance(rf.model)
+
+rf.prediction <- predict(rf.model, newdata = test_data)
+rf.prediction <- ifelse(rf.prediction >= 0.5, 1, 0)
+
+table(test_data$HeartDisease, rf.prediction)
+sum(test_data$HeartDisease==rf.prediction) / nrow(test_data)
+```
+
+The accuracy rate of 88.52459%. 

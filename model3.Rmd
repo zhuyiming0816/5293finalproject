@@ -1,1 +1,17 @@
 # [Model 3]
+Then we preform the svm model. 
+```{r}
+library(e1071)
+tune.svm.linear <- tune.svm(HeartDisease ~ ., data = train_data, kernel = "linear" , cost=c(0.001,0.01,0.1), gamma=c(0.001,0.01,0.1))
+summary(tune.svm.linear)
+
+#cost = 0.01, gamma = 0.001 is with the smallest error
+svm.linear <- svm(HeartDisease ~ ., data = train_data, kernel = "linear", cost = 0.01, gamma = 0.001)
+svm.linear.pred <- predict(svm.linear, newdata = test_data)
+svm.linear.pred <- ifelse(svm.linear.pred >= 0.5, 1, 0)
+table(test_data$HeartDisease,svm.linear.pred)
+sum(test_data$HeartDisease == svm.linear.pred)/nrow(test_data)
+
+```
+
+The accuracy rate is 83.06011%. 

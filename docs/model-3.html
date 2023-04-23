@@ -23,7 +23,7 @@
 <meta name="author" content="Yiming Zhu" />
 
 
-<meta name="date" content="2023-04-11" />
+<meta name="date" content="2023-04-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -98,6 +98,35 @@
             <section class="normal" id="section-">
 <div id="model-3" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Chapter 4</span> [Model 3]<a href="model-3.html#model-3" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Then we preform the svm model.</p>
+<pre><code>## 
+## Parameter tuning of &#39;svm&#39;:
+## 
+## - sampling method: 10-fold cross validation 
+## 
+## - best parameters:
+##  gamma cost
+##  0.001 0.01
+## 
+## - best performance: 0.1204383 
+## 
+## - Detailed performance results:
+##   gamma  cost     error dispersion
+## 1 0.001 0.001 0.1410255 0.02012603
+## 2 0.010 0.001 0.1410255 0.02012603
+## 3 0.100 0.001 0.1410255 0.02012603
+## 4 0.001 0.010 0.1204383 0.02149322
+## 5 0.010 0.010 0.1204383 0.02149322
+## 6 0.100 0.010 0.1204383 0.02149322
+## 7 0.001 0.100 0.1478619 0.03141998
+## 8 0.010 0.100 0.1478619 0.03141998
+## 9 0.100 0.100 0.1478619 0.03141998</code></pre>
+<pre><code>##    svm.linear.pred
+##      0  1
+##   0 63 19
+##   1 12 89</code></pre>
+<pre><code>## [1] 0.8306011</code></pre>
+<p>The accuracy rate is 83.06011%.</p>
 
 </div>
             </section>

@@ -23,7 +23,7 @@
 <meta name="author" content="Yiming Zhu" />
 
 
-<meta name="date" content="2023-04-11" />
+<meta name="date" content="2023-04-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -98,6 +98,25 @@
             <section class="normal" id="section-">
 <div id="model-2" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">Chapter 3</span> [Model 2]<a href="model-2.html#model-2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Then we perform the random forest model.</p>
+<pre><code>##                IncNodePurity
+## Age                12.135311
+## Sex                 6.025464
+## ChestPainType      22.595150
+## RestingBP          10.243862
+## Cholesterol        16.662321
+## FastingBS           4.125195
+## RestingECG          4.615653
+## MaxHR              16.826733
+## ExerciseAngina     14.002542
+## Oldpeak            17.115808
+## ST_Slope           41.904318</code></pre>
+<pre><code>##    rf.prediction
+##      0  1
+##   0 66 16
+##   1  5 96</code></pre>
+<pre><code>## [1] 0.8852459</code></pre>
+<p>The accuracy rate of 88.52459%.</p>
 
 </div>
             </section>

@@ -1,1 +1,34 @@
 # [Model 1]
+
+```{r}
+library(caret)
+heart = read.csv('heart.csv')
+heart$Sex=as.factor(heart$Sex)
+heart$ChestPainType=as.factor(heart$ChestPainType)
+heart$ExerciseAngina=as.factor(heart$ExerciseAngina)
+heart$ST_Slope=as.factor(heart$ST_Slope)
+heart$RestingECG=as.factor(heart$RestingECG)
+str(heart)
+```
+Firstly, we split data with 70/30. 
+
+```{r}
+set.seed(5293)
+train_split <- createDataPartition(heart$HeartDisease, p = 0.80, list = FALSE)
+train_data <- heart[train_split,]
+test_data <- heart[-train_split,]
+```
+
+Then we predict the logistic regression on all the variables. 
+
+```{r}
+log.model <- glm(HeartDisease ~ ., data = train_data, family = binomial(link = 'logit'))
+summary(log.model)
+
+glm.prediction <- predict(log.model, newdata = test_data, type = "response")
+glm.prediction <- ifelse(glm.prediction >= 0.5, 1, 0)
+
+table(test_data$HeartDisease, glm.prediction)
+sum(test_data$HeartDisease==glm.prediction) / nrow(test_data)
+```
+The accuracy rate is 88.52459%. 
