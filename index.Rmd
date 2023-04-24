@@ -6,6 +6,9 @@ site: bookdown::bookdown_site
 ---
 
 # Proposal
+With 17.9 million deaths per year, or 31% of all deaths worldwide, cardiovascular diseases (CVDs) are the leading cause of mortality worldwide. Heart attacks and strokes account for four out of every five CVD fatalities, and one-third of these deaths happen before the age of 70. Heart failure is a frequent complication of CVDs, and this dataset comprises 11 variables that might be used to anticipate the development of a potential heart condition.
+
+A machine learning model can be very helpful in the early diagnosis and care of people with cardiovascular disease or who are at high cardiovascular risk (due to the presence of one or more risk factors including hypertension, diabetes, hyperlipidaemia, or previously existing illness).
 
 For this project, I will examine the Heart Attack Analysis & Prediction Dataset. The original data set has 14 columns as follows. 
 
@@ -41,7 +44,7 @@ target:
 0 = less chance of heart attack 
 1 = more chance of heart attack
 
-The goal of this project is to predict the probability of whether a person is likely to have a heart attack based on their gender, age, cholesterol level using a logistic model, a Naive Bayes model, a Neural Network model, and a decision tree model. In addition, I will compare the result of all three models with the ‘target’ variable, which is the prediction of heart attack provided by the data author.  
+The goal of this project is to predict the probability of whether a person is likely to have a heart attack based on their gender, age, cholesterol level using a linear model as the baseline model, a logistic model, and a Nrandom forest model. In addition, I will compare the result of all three models with the ‘target’ variable, which is the prediction of heart attack provided by the data author.  
 
 This repo was initially generated from a bookdown template available here: https://github.com/jtr13/IMLVtemplate.
 

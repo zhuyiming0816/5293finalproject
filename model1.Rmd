@@ -1,5 +1,5 @@
 # [Model 1]
-
+Firstly, we load the data and convert all chracter variables to factor variables. 
 ```{r}
 library(caret)
 heart = read.csv('heart.csv')
@@ -10,7 +10,7 @@ heart$ST_Slope=as.factor(heart$ST_Slope)
 heart$RestingECG=as.factor(heart$RestingECG)
 str(heart)
 ```
-Firstly, we split data with 70/30. 
+Firstly, we split data with 80/20. 
 
 ```{r}
 set.seed(5293)
@@ -22,13 +22,13 @@ test_data <- heart[-train_split,]
 Then we predict the logistic regression on all the variables. 
 
 ```{r}
-log.model <- glm(HeartDisease ~ ., data = train_data, family = binomial(link = 'logit'))
-summary(log.model)
+lm.model <- lm(HeartDisease ~ ., data = train_data)
+summary(lm.model)
 
-glm.prediction <- predict(log.model, newdata = test_data, type = "response")
-glm.prediction <- ifelse(glm.prediction >= 0.5, 1, 0)
+lm.prediction <- predict(lm.model, newdata = test_data, type = "response")
+lm.prediction <- ifelse(lm.prediction >= 0.5, 1, 0)
 
-table(test_data$HeartDisease, glm.prediction)
-sum(test_data$HeartDisease==glm.prediction) / nrow(test_data)
+table(test_data$HeartDisease, lm.prediction)
+sum(test_data$HeartDisease==lm.prediction) / nrow(test_data)
 ```
-The accuracy rate is 88.52459%. 
+The accuracy rate is 89.61749%. 

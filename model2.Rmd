@@ -1,16 +1,16 @@
 # [Model 2]
 
-Then we perform the random forest model. 
+Then we predict the logistic regression on all the variables. 
+
 ```{r}
-library(randomForest)
-rf.model <- randomForest(HeartDisease ~ ., data = train_data)
-importance(rf.model)
+log.model <- glm(HeartDisease ~ ., data = train_data, family = binomial(link = 'logit'))
+summary(log.model)
 
-rf.prediction <- predict(rf.model, newdata = test_data)
-rf.prediction <- ifelse(rf.prediction >= 0.5, 1, 0)
+glm.prediction <- predict(log.model, newdata = test_data, type = "response")
+glm.prediction <- ifelse(glm.prediction >= 0.5, 1, 0)
 
-table(test_data$HeartDisease, rf.prediction)
-sum(test_data$HeartDisease==rf.prediction) / nrow(test_data)
+table(test_data$HeartDisease, glm.prediction)
+sum(test_data$HeartDisease==glm.prediction) / nrow(test_data)
 ```
 
-The accuracy rate of 88.52459%. 
+The accuracy rate is 88.52459%. 
