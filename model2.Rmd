@@ -1,4 +1,4 @@
-# [Model 2]
+# Logistic Model
 
 Then we predict the logistic regression on all the variables. 
 

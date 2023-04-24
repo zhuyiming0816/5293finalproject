@@ -1,4 +1,4 @@
-# [Model 3]
+# Random Forest Model
 Then we perform the random forest model. 
 ```{r}
 library(randomForest)

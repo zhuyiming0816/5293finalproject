@@ -1,7 +1,9 @@
-# [Model 1]
-Firstly, we load the data and convert all chracter variables to factor variables. 
+# Linear Model
+Firstly, we load the data and convert all character variables to factor variables. 
 ```{r}
 library(caret)
+library("ggplot2")                     
+library("GGally")
 heart = read.csv('heart.csv')
 heart$Sex=as.factor(heart$Sex)
 heart$ChestPainType=as.factor(heart$ChestPainType)
@@ -11,6 +13,11 @@ heart$RestingECG=as.factor(heart$RestingECG)
 str(heart)
 head(heart,5)
 ```
+
+```{r}
+ggpairs(heart, title = "correlogram with ggpairs()")
+```
+
 Firstly, we split data with 80/20. 
 
 ```{r}

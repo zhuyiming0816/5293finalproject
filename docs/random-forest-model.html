@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Reflections | Prediction of Heart Attack</title>
-  <meta name="description" content="Chapter 5 Reflections | Prediction of Heart Attack" />
+  <title>Chapter 4 Random Forest Model | Prediction of Heart Attack</title>
+  <meta name="description" content="Chapter 4 Random Forest Model | Prediction of Heart Attack" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Reflections | Prediction of Heart Attack" />
+  <meta property="og:title" content="Chapter 4 Random Forest Model | Prediction of Heart Attack" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Reflections | Prediction of Heart Attack" />
+  <meta name="twitter:title" content="Chapter 4 Random Forest Model | Prediction of Heart Attack" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="random-forest-model.html"/>
-
+<link rel="prev" href="logistic-model.html"/>
+<link rel="next" href="reflections.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -96,12 +96,27 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="reflections" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">Chapter 5</span> Reflections<a href="reflections.html#reflections" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Linear models: 89.61749%
-Logistic Regression Model : 88.52459%
-Random Forest Model : 89.61749%</p>
-<p>Based on the result, we can see that the linear mode has the highest prediction accuracy.</p>
+<div id="random-forest-model" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Random Forest Model<a href="random-forest-model.html#random-forest-model" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Then we perform the random forest model.</p>
+<pre><code>##                IncNodePurity
+## Age                12.135311
+## Sex                 6.025464
+## ChestPainType      22.595150
+## RestingBP          10.243862
+## Cholesterol        16.662321
+## FastingBS           4.125195
+## RestingECG          4.615653
+## MaxHR              16.826733
+## ExerciseAngina     14.002542
+## Oldpeak            17.115808
+## ST_Slope           41.904318</code></pre>
+<pre><code>##    rf.prediction
+##      0  1
+##   0 66 16
+##   1  5 96</code></pre>
+<pre><code>## [1] 0.8852459</code></pre>
+<p>The accuracy rate is 89.61749%.</p>
 
 </div>
             </section>
@@ -109,8 +124,8 @@ Random Forest Model : 89.61749%</p>
           </div>
         </div>
       </div>
-<a href="random-forest-model.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="logistic-model.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="reflections.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -141,7 +156,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/zhuyiming0816/5293finalproject/edit/main/reflections.Rmd",
+"link": "https://github.com/zhuyiming0816/5293finalproject/edit/main/model3.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -149,7 +164,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/zhuyiming0816/5293finalproject/blob/main/reflections.Rmd",
+"link": "https://github.com/zhuyiming0816/5293finalproject/blob/main/model3.Rmd",
 "text": null
 },
 "download": null,
