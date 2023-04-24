@@ -3,6 +3,4 @@ Linear models: 89.61749%
 Logistic Regression Model : 88.52459%
 Random Forest Model : 89.61749%
 
-Based on the result, we can see that even if the 
-
-
+Based on the result, we can see that the linear mode has the highest prediction accuracy.

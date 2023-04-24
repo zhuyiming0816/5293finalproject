@@ -9,6 +9,7 @@ heart$ExerciseAngina=as.factor(heart$ExerciseAngina)
 heart$ST_Slope=as.factor(heart$ST_Slope)
 heart$RestingECG=as.factor(heart$RestingECG)
 str(heart)
+head(heart,5)
 ```
 Firstly, we split data with 80/20. 
 
@@ -19,7 +20,8 @@ train_data <- heart[train_split,]
 test_data <- heart[-train_split,]
 ```
 
-Then we predict the logistic regression on all the variables. 
+Linear models are widely used in machine learning and statistical analysis because they are simple. For linear model, the relationship of variables are assumed to be linear, meaning that the change in the dependent variable is proportional to the change in the independent variable.
+Here we build the linear regression model on all the variables. 
 
 ```{r}
 lm.model <- lm(HeartDisease ~ ., data = train_data)
