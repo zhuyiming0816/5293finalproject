@@ -1,4 +1,5 @@
 proposal
+eda
 linear-model
 logistic-model
 random-forest-model
