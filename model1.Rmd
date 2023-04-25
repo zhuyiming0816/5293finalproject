@@ -4,6 +4,7 @@ Firstly, we load the data and convert all character variables to factor variable
 library(caret)
 library("ggplot2")                     
 library("GGally")
+library(corrplot)
 heart = read.csv('heart.csv')
 heart$Sex=as.factor(heart$Sex)
 heart$ChestPainType=as.factor(heart$ChestPainType)
@@ -14,11 +15,19 @@ str(heart)
 head(heart,5)
 ```
 
+Let examine the data first, Here is te correlogram of all the numeric variables of the data. 
 ```{r}
-ggpairs(heart, title = "correlogram with ggpairs()")
+factor_cols <- sapply(heart, is.factor)
+num_cols <- sapply(heart, is.numeric)
+df_factor <- heart[, factor_cols]
+df_num <- heart[, num_cols]
+corrplot(cor(df_num), title = "Numerical Variables Correlation Plot", mar=c(0,0,1,0))
+ggpairs(df_factor, title = "Facotr Variables Correlogram")
 ```
+Based on the result, we can see that there are some correlations between variables. Hence, I decide to include the linear model, logiatic models and the ramdom forest model as candidate models. 
 
-Firstly, we split data with 80/20. 
+
+To build and test the models, we split data with 80/20. 
 
 ```{r}
 set.seed(5293)

@@ -23,7 +23,7 @@
 <meta name="author" content="Yiming Zhu" />
 
 
-<meta name="date" content="2023-04-24" />
+<meta name="date" content="2023-04-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -124,8 +124,10 @@
 ## 3              N     0.0       Up            0
 ## 4              Y     1.5     Flat            1
 ## 5              N     0.0       Up            0</code></pre>
-<p><img src="finalproj_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<p>Firstly, we split data with 80/20.</p>
+<p>Let examine the data first, Here is te correlogram of all the numeric variables of the data.
+<img src="finalproj_files/figure-html/unnamed-chunk-4-1.png" width="672" /><img src="finalproj_files/figure-html/unnamed-chunk-4-2.png" width="672" />
+Based on the result, we can see that there are some correlations between variables. Hence, I decide to include the linear model, logiatic models and the ramdom forest model as candidate models.</p>
+<p>To build and test the models, we split data with 80/20.</p>
 <p>Linear models are widely used in machine learning and statistical analysis because they are simple. For linear model, the relationship of variables are assumed to be linear, meaning that the change in the dependent variable is proportional to the change in the independent variable.
 Here we build the linear regression model on all the variables.</p>
 <pre><code>## 
