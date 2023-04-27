@@ -12,4 +12,4 @@ table(test_data$HeartDisease, rf.prediction)
 sum(test_data$HeartDisease==rf.prediction) / nrow(test_data)
 ```
 
-The accuracy rate is 89.61749%. 
+The accuracy rate is 86.88525%. 

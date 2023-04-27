@@ -11,8 +11,9 @@ heart$ChestPainType=as.factor(heart$ChestPainType)
 heart$ExerciseAngina=as.factor(heart$ExerciseAngina)
 heart$ST_Slope=as.factor(heart$ST_Slope)
 heart$RestingECG=as.factor(heart$RestingECG)
-str(heart)
+summary(heart)
 head(heart,5)
+
 ```
 
 Let examine the data first, Here is te correlogram of all the numeric variables of the data. 

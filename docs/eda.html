@@ -23,7 +23,7 @@
 <meta name="author" content="Yiming Zhu" />
 
 
-<meta name="date" content="2023-04-25" />
+<meta name="date" content="2023-04-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -100,19 +100,27 @@
 <div id="eda" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> EDA<a href="eda.html#eda" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Firstly, we load the data and convert all character variables to factor variables.</p>
-<pre><code>## &#39;data.frame&#39;:    918 obs. of  12 variables:
-##  $ Age           : int  40 49 37 48 54 39 45 54 37 48 ...
-##  $ Sex           : Factor w/ 2 levels &quot;F&quot;,&quot;M&quot;: 2 1 2 1 2 2 1 2 2 1 ...
-##  $ ChestPainType : Factor w/ 4 levels &quot;ASY&quot;,&quot;ATA&quot;,&quot;NAP&quot;,..: 2 3 2 1 3 3 2 2 1 2 ...
-##  $ RestingBP     : int  140 160 130 138 150 120 130 110 140 120 ...
-##  $ Cholesterol   : int  289 180 283 214 195 339 237 208 207 284 ...
-##  $ FastingBS     : int  0 0 0 0 0 0 0 0 0 0 ...
-##  $ RestingECG    : Factor w/ 3 levels &quot;LVH&quot;,&quot;Normal&quot;,..: 2 2 3 2 2 2 2 2 2 2 ...
-##  $ MaxHR         : int  172 156 98 108 122 170 170 142 130 120 ...
-##  $ ExerciseAngina: Factor w/ 2 levels &quot;N&quot;,&quot;Y&quot;: 1 1 1 2 1 1 1 1 2 1 ...
-##  $ Oldpeak       : num  0 1 0 1.5 0 0 0 0 1.5 0 ...
-##  $ ST_Slope      : Factor w/ 3 levels &quot;Down&quot;,&quot;Flat&quot;,..: 3 2 3 2 3 3 3 3 2 3 ...
-##  $ HeartDisease  : int  0 1 0 1 0 0 0 0 1 0 ...</code></pre>
+<pre><code>##       Age        Sex     ChestPainType   RestingBP      Cholesterol   
+##  Min.   :28.00   F:193   ASY:496       Min.   :  0.0   Min.   :  0.0  
+##  1st Qu.:47.00   M:725   ATA:173       1st Qu.:120.0   1st Qu.:173.2  
+##  Median :54.00           NAP:203       Median :130.0   Median :223.0  
+##  Mean   :53.51           TA : 46       Mean   :132.4   Mean   :198.8  
+##  3rd Qu.:60.00                         3rd Qu.:140.0   3rd Qu.:267.0  
+##  Max.   :77.00                         Max.   :200.0   Max.   :603.0  
+##    FastingBS       RestingECG      MaxHR       ExerciseAngina    Oldpeak       
+##  Min.   :0.0000   LVH   :188   Min.   : 60.0   N:547          Min.   :-2.6000  
+##  1st Qu.:0.0000   Normal:552   1st Qu.:120.0   Y:371          1st Qu.: 0.0000  
+##  Median :0.0000   ST    :178   Median :138.0                  Median : 0.6000  
+##  Mean   :0.2331                Mean   :136.8                  Mean   : 0.8874  
+##  3rd Qu.:0.0000                3rd Qu.:156.0                  3rd Qu.: 1.5000  
+##  Max.   :1.0000                Max.   :202.0                  Max.   : 6.2000  
+##  ST_Slope    HeartDisease   
+##  Down: 63   Min.   :0.0000  
+##  Flat:460   1st Qu.:0.0000  
+##  Up  :395   Median :1.0000  
+##             Mean   :0.5534  
+##             3rd Qu.:1.0000  
+##             Max.   :1.0000</code></pre>
 <pre><code>##   Age Sex ChestPainType RestingBP Cholesterol FastingBS RestingECG MaxHR
 ## 1  40   M           ATA       140         289         0     Normal   172
 ## 2  49   F           NAP       160         180         0     Normal   156

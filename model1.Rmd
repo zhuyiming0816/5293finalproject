@@ -14,3 +14,5 @@ table(test_data$HeartDisease, lm.prediction)
 sum(test_data$HeartDisease==lm.prediction) / nrow(test_data)
 ```
 The accuracy rate is 89.61749%. 
+
+
