@@ -23,7 +23,7 @@
 <meta name="author" content="Yiming Zhu" />
 
 
-<meta name="date" content="2023-04-27" />
+<meta name="date" content="2023-04-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -133,8 +133,13 @@
 ## 3              N     0.0       Up            0
 ## 4              Y     1.5     Flat            1
 ## 5              N     0.0       Up            0</code></pre>
+<p>This dataset contains 14 variables that could be used to foresee the development of a potential heart condition including age, sex, whether the patient excercise, maximum heart rate achieved , Chest Pain type and so on.
+Here, we select the HeartDisease, a binary variable that indicates whether a person has a heart attack or not as the response variables. Here are the first five columns of the dataset.</p>
 <p>Let examine the data first, Here is te correlogram of all the numeric variables of the data.
 <img src="finalproj_files/figure-html/unnamed-chunk-4-1.png" width="672" /><img src="finalproj_files/figure-html/unnamed-chunk-4-2.png" width="672" /></p>
+<p>The heart disease dataset’s correlation plot displays the correlation coefficients between various pairs of variables. Age, Resting Blood Pressure, Cholesterol, Max Heart Rate, Old Peak, and Heart Disease are the variables included in the heatmap.</p>
+<p>The correlation coefficient between any two variables is shown in each cell of the heatmap. The cell’s color serves as a gauge for the degree of correlation: blue denotes a weak correlation, light blue denotes a strong correlation, and white denotes no correlation. The correlation coefficient’s magnitude is represented by the color’s hue, with stronger correlations being represented by darker hues.</p>
+<p>For instance, a positive correlation between age and the presence of heart disease is indicated by the light blue color of the cell where Age and HeartDisease intersect. The cell at the intersection of cholesterol and heart disease, on the other hand, is light orange blue, indicating a negative correlation between the presence of heart disease and cholesterol levels.</p>
 <p>Based on the result, we can see that there are some correlations between variables. Hence, I decide to include the linear model, logiatic models and the ramdom forest model as candidate models.</p>
 <p>To build and test the models, we split data with 80/20.</p>
 

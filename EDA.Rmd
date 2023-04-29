@@ -15,6 +15,8 @@ summary(heart)
 head(heart,5)
 
 ```
+This dataset contains 14 variables that could be used to foresee the development of a potential heart condition including age, sex, whether the patient excercise, maximum heart rate achieved , Chest Pain type and so on. 
+Here, we select the HeartDisease, a binary variable that indicates whether a person has a heart attack or not as the response variables. Here are the first five columns of the dataset.
 
 Let examine the data first, Here is te correlogram of all the numeric variables of the data. 
 ```{r}
@@ -26,6 +28,11 @@ corrplot(cor(df_num), title = "Numerical Variables Correlation Plot", mar=c(0,0,
 ggpairs(df_factor, title = "Facotr Variables Correlogram")
 ```
 
+The heart disease dataset's correlation plot displays the correlation coefficients between various pairs of variables. Age, Resting Blood Pressure, Cholesterol, Max Heart Rate, Old Peak, and Heart Disease are the variables included in the heatmap.
+
+The correlation coefficient between any two variables is shown in each cell of the heatmap. The cell's color serves as a gauge for the degree of correlation: blue denotes a weak correlation, light blue denotes a strong correlation, and white denotes no correlation. The correlation coefficient's magnitude is represented by the color's hue, with stronger correlations being represented by darker hues.
+
+For instance, a positive correlation between age and the presence of heart disease is indicated by the light blue color of the cell where Age and HeartDisease intersect. The cell at the intersection of cholesterol and heart disease, on the other hand, is light orange blue, indicating a negative correlation between the presence of heart disease and cholesterol levels.
 
 Based on the result, we can see that there are some correlations between variables. Hence, I decide to include the linear model, logiatic models and the ramdom forest model as candidate models. 
 
