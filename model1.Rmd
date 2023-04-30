@@ -1,7 +1,7 @@
 # Linear Model
 
 Linear models are widely used in machine learning and statistical analysis because they are simple. For linear model, the relationship of variables are assumed to be linear, meaning that the change in the dependent variable is proportional to the change in the independent variable.
-Here we build the linear regression model on all the variables. 
+Then we built the linear model with training dataset and examine the model's performance with test dataset. 
 
 ```{r}
 lm.model <- lm(HeartDisease ~ ., data = train_data)

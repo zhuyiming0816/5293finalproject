@@ -1,7 +1,6 @@
 # Logistic Model
 
-Then we predict the logistic regression on all the variables. 
-
+Then we built the logistic model with training dataset and examine the model's performance with test dataset. 
 ```{r}
 log.model <- glm(HeartDisease ~ ., data = train_data, family = binomial(link = 'logit'))
 summary(log.model)

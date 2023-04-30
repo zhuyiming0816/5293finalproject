@@ -1,5 +1,5 @@
 # Random Forest Model
-Then we perform the random forest model. 
+Then we built the random forest model with training dataset and examine the model's performance with test dataset. 
 ```{r}
 library(randomForest)
 rf.model <- randomForest(HeartDisease ~ ., data = train_data)

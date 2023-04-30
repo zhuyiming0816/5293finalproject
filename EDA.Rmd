@@ -30,12 +30,56 @@ ggpairs(df_factor, title = "Facotr Variables Correlogram")
 
 The heart disease dataset's correlation plot displays the correlation coefficients between various pairs of variables. Age, Resting Blood Pressure, Cholesterol, Max Heart Rate, Old Peak, and Heart Disease are the variables included in the heatmap.
 
-The correlation coefficient between any two variables is shown in each cell of the heatmap. The cell's color serves as a gauge for the degree of correlation: blue denotes a weak correlation, light blue denotes a strong correlation, and white denotes no correlation. The correlation coefficient's magnitude is represented by the color's hue, with stronger correlations being represented by darker hues.
+The correlation coefficient between any two variables is shown in each cell of the heatmap. The cell's color serves as a gauge for the degree of correlation: orange denotes a negative correlation, blue denotes a positive correlation, and white denotes no correlation. The correlation coefficient's magnitude is represented by the color's hue, with stronger correlations being represented by darker hues.
 
 For instance, a positive correlation between age and the presence of heart disease is indicated by the light blue color of the cell where Age and HeartDisease intersect. The cell at the intersection of cholesterol and heart disease, on the other hand, is light orange blue, indicating a negative correlation between the presence of heart disease and cholesterol levels.
 
-Based on the result, we can see that there are some correlations between variables. Hence, I decide to include the linear model, logiatic models and the ramdom forest model as candidate models. 
+Based on the result, we can see that there are some correlations between variables. Hence, I decide to include the linear model, logistic models and the random forest model as candidate models. 
 
+Now, let's split the data into two parts. One is data with 'HeartDisease' is 1. In this part of the dataset, the patients have more chance of heart attack. The other is data with 'HeartDisease' is 0. In this part of the dataset, the patients have less chance of heart attack. I will exam the histogram of numeric variables in these two data set. 
+
+Here is the result of the dataset with with 'HeartDisease' 0. 
+
+```{r}
+heart0 = subset(heart, subset = (HeartDisease == 0))
+heart1 = subset(heart, subset = (HeartDisease == 1))
+
+
+hist(heart0$Age, freq=F, main = "age",
+     xlab = "age (HeartDisease = 0)", ylab = "Density")
+hist(heart0$RestingBP, freq=F, main = "RestingBP",
+     xlab = "RestingBP (HeartDisease = 0)", ylab = "Density")
+hist(heart0$Cholesterol
+, freq=F, main = "Cholesterol",
+     xlab = "Cholesterol (HeartDisease = 0)", ylab = "Density")
+hist(heart0$FastingBS, freq=F, main = "FastingBS",
+     xlab = "FastingBS (HeartDisease = 0)", ylab = "Density")
+hist(heart0$MaxHR, freq=F, main = "MaxHR",
+     xlab = "MaxHR (HeartDisease = 0)", ylab = "Density")
+hist(heart0$Oldpeak, freq=F, main = "Oldpeak",
+     xlab = "Oldpeak (HeartDisease = 0)", ylab = "Density")
+```
+
+
+Here is the result of the dataset with with 'HeartDisease' 1. 
+
+```{r}
+hist(heart1$Age, freq=F, main = "age",
+     xlab = "age (HeartDisease = 1)", ylab = "Density")
+hist(heart1$RestingBP, freq=F, main = "RestingBP",
+     xlab = "RestingBP (HeartDisease = 1)", ylab = "Density")
+hist(heart1$Cholesterol
+, freq=F, main = "Cholesterol",
+     xlab = "Cholesterol (HeartDisease = 1)", ylab = "Density")
+hist(heart1$FastingBS, freq=F, main = "FastingBS",
+     xlab = "FastingBS (HeartDisease = 1)", ylab = "Density")
+hist(heart1$MaxHR, freq=F, main = "MaxHR",
+     xlab = "MaxHR (HeartDisease = 1)", ylab = "Density")
+hist(heart1$Oldpeak, freq=F, main = "Oldpeak",
+     xlab = "Oldpeak (HeartDisease = 1)", ylab = "Density")
+```
+
+Based on the result, we can see that for variable 'Oldpeak', the is a difference of their distribution in different dataset. 
 
 To build and test the models, we split data with 80/20. 
 
