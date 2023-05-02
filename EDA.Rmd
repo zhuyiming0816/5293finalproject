@@ -15,7 +15,7 @@ summary(heart)
 head(heart,5)
 
 ```
-This dataset contains 14 variables that could be used to foresee the development of a potential heart condition including age, sex, whether the patient excercise, maximum heart rate achieved , Chest Pain type and so on. 
+This dataset contains 12 variables that could be used to foresee the development of a potential heart condition including age, sex, whether the patient excercise, maximum heart rate achieved , Chest Pain type and so on. 
 Here, we select the HeartDisease, a binary variable that indicates whether a person has a heart attack or not as the response variables. Here are the first five columns of the dataset.
 
 Let examine the data first, Here is te correlogram of all the numeric variables of the data. 

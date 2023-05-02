@@ -1,6 +1,8 @@
 # Logistic Model
 
-Then we built the logistic model with training dataset and examine the model's performance with test dataset. 
+Logistic regression is a statistical model used for analyzing the relationship between a binary dependent variable and one or more independent variables. It predicts the probability of an event occurring based on previous data, using a logistic function to model the relationship between the independent and dependent variables. Logistic regression is widely used in various fields, including medicine, marketing, and social sciences, to predict the likelihood of an event or outcome occurring based on specific factors.
+
+Next, we built the logistic model with training dataset and examine the model's performance with test dataset. 
 ```{r}
 log.model <- glm(HeartDisease ~ ., data = train_data, family = binomial(link = 'logit'))
 summary(log.model)

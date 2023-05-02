@@ -1,5 +1,7 @@
 # Random Forest Model
-Then we built the random forest model with training dataset and examine the model's performance with test dataset. 
+Random forest is a popular machine learning algorithm used for classification, regression, and other tasks. It operates by constructing multiple decision trees during training and outputting the mode of the classes or mean prediction of the individual trees as the final prediction. Each decision tree in the forest is trained on a random subset of the training data and a random subset of the input features, making the algorithm more resistant to overfitting and improving its generalization ability. Random forest models are widely used in various domains, including finance, healthcare, and natural language processing.
+
+Next, we built the random forest model with training dataset and examine the model's performance with test dataset. 
 ```{r}
 library(randomForest)
 rf.model <- randomForest(HeartDisease ~ ., data = train_data)

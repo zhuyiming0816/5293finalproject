@@ -23,7 +23,7 @@
 <meta name="author" content="Yiming Zhu" />
 
 
-<meta name="date" content="2023-04-30" />
+<meta name="date" content="2023-05-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -100,34 +100,19 @@
 <div id="header">
 <h1 class="title">Prediction of Heart Attack</h1>
 <p class="author"><em>Yiming Zhu</em></p>
-<p class="date"><em>2023-04-30</em></p>
+<p class="date"><em>2023-05-01</em></p>
 </div>
 <div id="proposal" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Proposal<a href="index.html#proposal" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>With 17.9 million deaths per year, or 31% of all deaths worldwide, cardiovascular diseases (CVDs) are the leading cause of mortality worldwide. Heart attacks and strokes account for four out of every five CVD fatalities, and one-third of these deaths happen before the age of 70. Heart failure is a frequent complication of CVDs, and this dataset comprises 11 variables that might be used to anticipate the development of a potential heart condition.</p>
-<p>A machine learning model can be very helpful in the early diagnosis and care of people with cardiovascular disease or who are at high cardiovascular risk (due to the presence of one or more risk factors including hypertension, diabetes, hyperlipidaemia, or previously existing illness).</p>
-<p>For this project, I will examine the Heart Attack Analysis &amp; Prediction Dataset. The original data set has 14 columns as follows.</p>
-<p>Age: Age of the patient</p>
-<p>Sex: Sex of the patient</p>
-<p>exang: exercise induced angina (1 = yes; 0 = no)</p>
-<p>ca: number of major vessels (0-3)</p>
-<p>cp: Chest Pain type chest pain type</p>
-<p>Value 1: typical angina
-Value 2: atypical angina
-Value 3: non-anginal pain
-Value 4: asymptomatic
-trtbps : resting blood pressure (in mm Hg)</p>
-<p>chol: cholestoral in mg/dl fetched via BMI sensor</p>
-<p>fbs : (fasting blood sugar &gt; 120 mg/dl) (1 = true; 0 = false)</p>
-<p>rest_ecg: resting electrocardiographic results</p>
-<p>Value 0: normal
-Value 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of &gt; 0.05 mV)
-Value 2: showing probable or definite left ventricular hypertrophy by Estes’ criteria</p>
-<p>oldpeak: ST depression induced by exercise relative to rest</p>
-<p>h:
-0 = less chance of heart attack
-1 = more chance of heart attack</p>
-<p>The goal of this project is to predict the probability of whether a person is likely to have a heart attack based on their gender, age, cholesterol level using a linear model as the baseline model, a logistic model, and a Nrandom forest model. In addition, I will compare the result of all three models with the ‘target’ variable, which is the prediction of heart attack provided by the data author.</p>
+<p>Developing a Machine Learning Model to Predict the Risk of Heart Attack Using Heart Attack Analysis &amp; Prediction Dataset</p>
+<p>Introduction:
+Cardiovascular diseases (CVDs) are the leading cause of mortality worldwide, accounting for 17.9 million deaths annually or 31% of all deaths globally. Early diagnosis and care of people with CVDs or those at high cardiovascular risk can significantly improve outcomes. Heart attacks and strokes, which account for four out of every five CVD fatalities, can occur before the age of 70, highlighting the importance of early detection. Therefore, this project aims to develop a machine learning model to predict the risk of heart attack using the Heart Attack Analysis &amp; Prediction Dataset.</p>
+<p>Objectives:
+The primary goal of this project is to predict the probability of a person having a heart attack based on their gender, age, and cholesterol level using a linear model as the baseline model, a logistic model, and a random forest model. Additionally, the results of all three models will be compared with the “HeartDisease” variable, which is the prediction of possibility of heart attack provided by the data author.</p>
+<p>Methods:
+The Heart Attack Analysis &amp; Prediction Dataset will be used for this project, which includes 11 variables, including age, sex, exercise-induced angina, number of major vessels, chest pain type, resting blood pressure, cholestoral, fasting blood sugar, resting electrocardiographic results, ST depression induced by exercise relative to rest, and the target variable for heart attack prediction.</p>
+<p>Three models will be developed and compared to predict the risk of heart attack, including a linear model as the baseline model, a logistic model, and a random forest model. The models will be evaluated using accuracy, sensitivity, and specificity metrics, and the best-performing model will be selected for further analysis.</p>
+<p>The developed machine learning model will provide an accurate prediction of the probability of a person having a heart attack based on their gender, age, and cholesterol level. The results will be compared with the prediction of heart attack provided by the data author to determine the model’s effectiveness in detecting heart attack risk. The project’s findings will contribute to the early detection and prevention of heart attacks, ultimately improving patient outcomes.</p>
 <p>This repo was initially generated from a bookdown template available here: <a href="https://github.com/jtr13/IMLVtemplate" class="uri">https://github.com/jtr13/IMLVtemplate</a>.</p>
 <p>Data source: <a href="https://archive.ics.uci.edu/ml/datasets/Heart+Disease" class="uri">https://archive.ics.uci.edu/ml/datasets/Heart+Disease</a> (UCI)</p>
 
